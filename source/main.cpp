@@ -1,15 +1,20 @@
 #include <iostream>
 
 #include "macros.h"
+#include "coordStruct/coordStruct.h"
+#include "distanceCalculator.h"
 
 
 
 int main()
 {
-    std::cout << MIN(1,2) << std::endl;
-    std::cout << MAX(1,2) << std::endl;
-    std::cout << CLAMP(50, 0, 100) << std::endl;
-    std::cout << CLAMP(-50, 0, 100) << std::endl;
-    std::cout << CLAMP(150, 0, 100) << std::endl;
+    Coord a;
+    Coord b(5,5);
+
+    std::cout << distanceCalculator(0, a, b) << std::endl;
+    std::cout << distanceCalculator(1, a, b) << std::endl;
+    std::cout << distanceCalculator(2, a, b) << std::endl;
+    std::cout << distanceCalculator(3, a, b) << std::endl;
+    std::cout << distanceCalculator(4, a, b) << std::endl;
 	return 0;
 }
