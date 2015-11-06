@@ -4,25 +4,25 @@
 
 Coord::Coord()
 {
-    myPosX = 0;
-    myPosY = 0;
-    myPosZ = 0;
+    X = 0;
+    Y = 0;
+    Z = 0;
 }
 
 
 
 Coord::Coord(double aPosX, double aPosY)
 {
-    myPosX = aPosX;
-    myPosY = aPosY;
-    myPosZ = 0;
+    X = aPosX;
+    Y = aPosY;
+    Z = 0;
 }
 
 
 
 Coord::Coord(double aPosX, double aPosY, double aPosZ)
 {
-    myPosX = aPosX;
-    myPosY = aPosY;
-    myPosZ = aPosZ;
+    X = aPosX;
+    Y = aPosY;
+    Z = aPosZ;
 }
