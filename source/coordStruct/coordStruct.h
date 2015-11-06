@@ -2,7 +2,7 @@
 
 
 
-typedef struct Coord
+struct Coord
 {
     Coord();
     Coord(double aPosX, double aPosY);
@@ -11,4 +11,4 @@ typedef struct Coord
     double myPosX;
     double myPosY;
     double myPosZ;
-} Coord;
+};

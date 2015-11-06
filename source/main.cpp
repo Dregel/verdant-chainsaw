@@ -9,7 +9,7 @@
 int main()
 {
     Coord a;
-    Coord b(5,5);
+    Coord b(3,3);
 
     std::cout << distanceCalculator(0, a, b) << std::endl;
     std::cout << distanceCalculator(1, a, b) << std::endl;
@@ -18,3 +18,4 @@ int main()
     std::cout << distanceCalculator(4, a, b) << std::endl;
 	return 0;
 }
+
