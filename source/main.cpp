@@ -1,30 +1,29 @@
 #include <iostream>
 
 #include "macros.h"
-#include "coordStruct/coordStruct.h"
-#include "distanceCalculator.h"
+#include "stack/stack.h"
 
+
+
+template class stack<float, 10>;
 
 
 int main()
 {
-    Coord a;
-    Coord b(5, 10);
+    stack<uint32_t, 10> a;
 
-    std::cout << distanceCalculator(0, a, b) << std::endl;
-    std::cout << distanceCalculator(1, a, b) << std::endl;
-    std::cout << distanceCalculator(2, a, b) << std::endl;
-    std::cout << distanceCalculator(3, a, b) << std::endl;
-    std::cout << distanceCalculator(4, a, b) << std::endl;
+    for(uint32_t i = 0; i < 10; ++i)
+    {
+        std::cout << a.GetCapacity() << "\t" << a.GetSize() << std::endl;
+        a.Push(i);
+    }
 
-    a.X = 10;
-    a.Y = 5;
-
-    std::cout << distanceCalculator(0, a, b) << std::endl;
-    std::cout << distanceCalculator(1, a, b) << std::endl;
-    std::cout << distanceCalculator(2, a, b) << std::endl;
-    std::cout << distanceCalculator(3, a, b) << std::endl;
-    std::cout << distanceCalculator(4, a, b) << std::endl;
+    for(uint32_t i = 10; i > 0; --i)
+    {
+        std::cout << std::endl << a.GetCapacity() << "\t" << a.GetSize() << std::endl;
+        std::cout << a.Pop() << std::endl;
+        std::cout << a.GetCapacity() << "\t" << a.GetSize() << std::endl;
+    }
 
 	return 0;
 }
